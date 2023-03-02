@@ -5,7 +5,7 @@ import React from 'react'
 // v- chemin components
 import Header from '../../components/Header'
 import BannerAccueil from '../../components/BannerAccueil'
-import Card from '../../components/Card'
+import CardTotal from '../../components/Card'
 import Footer from '../../components/Footer'
 
 function Accueil() {
@@ -13,11 +13,8 @@ function Accueil() {
     <>
       <Header />
       <BannerAccueil />
-      <Card />
-
-
-
-      {/* <Footer /> */}
+      <CardTotal />
+      <Footer />
     </>
   )
 }

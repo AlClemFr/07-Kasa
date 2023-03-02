@@ -14,18 +14,10 @@ import Logo from '../../10_images/logo_kasa_blanco_fond_noir.png'
 
 function Footer() {
   return (
-
-    // <Footer00>
     <div className="footer-body">
-      {/* <span className="footer-texte">© 2020 Kasa. All rights reserved</span> */}
       <img className="footer-logo" src={Logo} alt="Logo Kasa" />
-      {/* <h6 className="footer-texte">© 2020 Kasa. All rights reserved</h6> */}
-      <br></br>
-      <br></br>
-
       <h5 className="footer-texte">© 2020 Kasa. All rights reserved</h5>
     </div >
-    //  </Footer00 >
   )
 }
 

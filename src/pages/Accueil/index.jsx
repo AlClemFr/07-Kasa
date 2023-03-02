@@ -4,16 +4,20 @@ import React from 'react'
 
 // v- chemin components
 import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import BannerAccueil from '../../components/BannerAccueil'
+import Card from '../../components/Card'
+import Footer from '../../components/Footer'
 
 function Accueil() {
   return (
     <>
       <Header />
       <BannerAccueil />
+      <Card />
 
-      <Footer />
+
+
+      {/* <Footer /> */}
     </>
   )
 }

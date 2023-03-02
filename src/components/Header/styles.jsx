@@ -22,12 +22,12 @@ top: 40px;
 `
 
 
-/* .LOGO */
-const HeaderLogo = styled.div`
-position: absolute;
-width: 0px;
-/* height: 68px; */
-`
+// /* .LOGO */
+// const HeaderLogo = styled.div`
+// position: absolute;
+// width: 0px;
+// /* height: 68px; */
+// `
 
 /* Accueil */
 const HeaderAccueil = styled(Link)`
@@ -86,4 +86,4 @@ color: #FF6060;
 
 `
 
-export { HeaderLink, Header00, HeaderLogo, HeaderAbout, HeaderAccueil }
+export { HeaderLink, Header00, HeaderAbout, HeaderAccueil }

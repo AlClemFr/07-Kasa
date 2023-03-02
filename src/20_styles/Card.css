@@ -3,8 +3,7 @@
 .card-total {
 
   display: flex;
-  /* flex-direction: column; */
-  flex-direction: row wrap;
+  flex-wrap: wrap;
 
   box-sizing: border-box;
 

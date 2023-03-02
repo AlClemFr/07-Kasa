@@ -1,0 +1,58 @@
+.footer-body {
+  position: absolute;
+  width: 1240px;
+  height: 208px;
+  left: 100px;
+  top: 40px;
+  background: #090909;
+
+
+  margin-left: 5%;
+  margin-top: 35%;
+}
+
+/* .LOGO */
+.footer-logo {
+  position: absolute;
+
+  left: 6.94%;
+  right: 78.45%;
+  top: 3.91%;
+  bottom: 89.45%;
+
+  left: 0%;
+  right: 0%;
+  top: -0%;
+  bottom: 0%;
+
+  font-size: 10%;
+
+  color: blue;
+
+  /* max-width: 40vw; */
+  width: 10%;
+
+  margin-left: 5%;
+  margin-top: 52%;
+  margin-top: 0%;
+
+
+  /* left: 10%; */
+
+}
+
+
+.footer-texte {
+  /* position: absolute;
+  width: 1240px;
+  height: 208px;
+  left: 100px;
+  top: 40px; */
+  /* background: #090909; */
+
+  /* margin-left: 5%;
+  margin-top: 52%; */
+
+  /* font-size: 10%; */
+  color: white;
+}

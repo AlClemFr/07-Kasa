@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //v- chemin page
 import Accueil from './pages/Accueil'
 import Apropos from './pages/Apropos'
+import FicheLogement from './pages/FicheLogement'
+
+
 
 // v- chemin composants
 // import Header from './components/Header'
@@ -17,7 +20,9 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Accueil />} />
-      <Route path="/about" element={<Apropos />} />
+      <Route path="/About" element={<Apropos />} />
+      <Route path="/FicheLogement/:id" element={<><FicheLogement /></>} />
+
 
       {/* aucun chemain trouvée */}
       <Route path="*" element={<Error />} />

@@ -5,7 +5,7 @@ import React from 'react'
 // v- chemin components
 import Header from '../../components/Header'
 import BannerAccueil from '../../components/BannerAccueil'
-import CardTotal from '../../components/Card'
+import CardTotal from '../../components/CardTotal'
 import Footer from '../../components/Footer'
 
 function Accueil() {

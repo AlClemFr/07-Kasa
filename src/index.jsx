@@ -20,6 +20,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Accueil />} />
+      <Route path='' element={<Accueil />} />
+
       <Route path='/kasa' element={<Accueil />} />
       <Route path='/About' element={<Apropos />} />
       <Route path='/FicheLogement/:id' element={<><FicheLogement /></>} />

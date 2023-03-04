@@ -10,8 +10,13 @@ import BannerApropos from '../../components/BannerApropos'
 function Apropos() {
   return (
     <>
+      {/* <head> */}
+      {/* <!-- Titre de l'onglet --> */}
+      {/* <title>Kasa</title> */}
+      {/* <!-- Icone dans le titre de l'onglet --> */}
+      {/* <link rel="shortcut icon" href="../../10_images/Booki@3x.png"></link> */}
+      {/* </head> */}
       <Header />
-
       <BannerApropos />
       <Footer />
     </>

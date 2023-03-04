@@ -20,8 +20,9 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Accueil />} />
-      <Route path="/About" element={<Apropos />} />
-      <Route path="/FicheLogement/:id" element={<><FicheLogement /></>} />
+      <Route path='/kasa' element={<Accueil />} />
+      <Route path='/About' element={<Apropos />} />
+      <Route path='/FicheLogement/:id' element={<><FicheLogement /></>} />
 
 
       {/* aucun chemain trouvée */}

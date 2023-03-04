@@ -26,45 +26,59 @@ function Defilement() {
   //  que l'on va appeler « count »  
   let [count, setCount] = useState(0)
 
-  if (count < 0) { count = 4 }
-  if (count > 4) { count = 0 }
+
 
   const { id } = useParams();
   const InfoLogement = DataLogement.find((info) => info.id === id);
 
-  let ii = count + 1
-
-  const image = InfoLogement.pictures[count]
-
-  const numeroCourant = ii.toString()
-
   let numeroFin = InfoLogement.pictures.length
   numeroFin = numeroFin.toString()
 
-  console.log(numeroCourant)
-  console.log(numeroFin)
+  if (count >= numeroFin) { count = 0 }
+  if (count < 0) { count = numeroFin - 1 }
+
+  console.log("count: ", count, "  numerofin:", numeroFin)
+
+  let masquage = "defilement-masquage"
+  if (numeroFin > 1) { masquage = "" }
+
+  console.log("numero fin : ", numeroFin, "masquage:  ", masquage)
+
+  // let ii = count
+  // + 1
+
+  const image = InfoLogement.pictures[count]
+
+  // const numeroCourant = count
+
+  // let numeroFin = InfoLogement.pictures.length
+  // numeroFin = numeroFin.toString()
+
+  // console.log(numeroCourant)
+  // console.log(numeroFin)
 
   return (
     <>
       <div className="defilement-corps">
         <img className="defilement-image" src={image} alt={InfoLogement.description[count]} />
 
-        <h1 className="defilement-texte"> {InfoLogement.id}</h1>
+        <h1 className="defilement-texte"> {"Fiche Logement = " + InfoLogement.id}</h1>
 
-        {/* fleche de gauche */}
-        <Link className="defilement-fond" to={`/FicheLogement/${InfoLogement.id}`}>
-          <img className="defilement-gauche" src={flèche_vers_la_gauche}
-            alt={InfoLogement.description} onClick={() => setCount(count - 1)} />
-        </Link>
+        <div className={masquage}>
+          {/* fleche de gauche */}
+          <Link to={`/FicheLogement/${InfoLogement.id}`}>
+            <img className="defilement-gauche" src={flèche_vers_la_gauche}
+              alt={InfoLogement.description} onClick={() => setCount(count - 1)} />
+          </Link>
 
-        {/* fleche de droite */}
-        <Link className="defilement-fond" to={`/FicheLogement/${InfoLogement.id}`}>
-          <img className="defilement-droite" src={flèche_vers_la_droite}
-            alt={InfoLogement.description} onClick={() => setCount(count + 1)} />
-        </Link>
+          {/* fleche de droite */}
+          <Link to={`/FicheLogement/${InfoLogement.id}`}>
+            <img className="defilement-droite" src={flèche_vers_la_droite}
+              alt={InfoLogement.description} onClick={() => setCount(count + 1)} />
+          </Link>
 
-        <h5 className="defilement-numero"> {numeroCourant}/{numeroFin}</h5>
-
+          <h5 className="defilement-numero"> {count + 1}/{numeroFin}</h5>
+        </div>
       </div >
 
     </>

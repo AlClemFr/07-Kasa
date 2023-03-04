@@ -71,7 +71,7 @@
 
 
   margin-left: 30%;
-  margin-top: -12%;
+  margin-top: -32%;
 
 }
 
@@ -79,11 +79,15 @@
 /*v- ------------------- */
 
 
-.defilement-fond {
+.defilement-masquage {
   /* background-color: green; */
 
   /* width: 50px; */
   /* height: auto; */
+  opacity: 0;
+  /* cursor: none; */
+  pointer-events: none;
+  cursor: default;
 }
 
 
@@ -106,7 +110,7 @@
   width: 1.5%;
 
   margin-left: 44%;
-  margin-top: 0%;
+  margin-top: 22.8%;
 
 }
 
@@ -117,6 +121,8 @@
   top: 0%;
   bottom: 0%;
 
+
+
   /* font-size: 5%; */
 
   /* color: blue; */
@@ -125,7 +131,7 @@
   width: 1.5%;
 
   margin-left: 8%;
-  margin-top: 3%;
+  margin-top: 17%;
 
 }
 

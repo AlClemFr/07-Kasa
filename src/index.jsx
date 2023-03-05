@@ -8,16 +8,12 @@ import Accueil from './pages/Accueil'
 import Apropos from './pages/Apropos'
 import FicheLogement from './pages/FicheLogement'
 
-
-
-// v- chemin composants
-// import Header from './components/Header'
-// import Footer from './components/Footer'
-
+//v- chemin composants
 import Error from './components/Error'
 
-ReactDOM.render(
-  <BrowserRouter>
+//v- élément route
+const route =
+  <BrowserRouter >
     <Routes>
       <Route path='/' element={<Accueil />} />
       <Route path='' element={<Accueil />} />
@@ -34,6 +30,8 @@ ReactDOM.render(
       <Route path="/error" element={<Error />} />
 
     </Routes>
-  </BrowserRouter>,
-  document.getElementById('root')
-)
+  </BrowserRouter >
+
+//v- lien avec le DOM accrochage à ID root 
+//v- voir Html dans répèrtoire public
+ReactDOM.render(route, document.getElementById('root'))

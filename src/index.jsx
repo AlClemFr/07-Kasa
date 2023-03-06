@@ -32,6 +32,6 @@ const route =
     </Routes>
   </BrowserRouter >
 
-//v- lien avec le DOM accrochage à ID root 
+//v- lien avec le DOM accrochage à l'ID root 
 //v- voir Html dans répèrtoire public
 ReactDOM.render(route, document.getElementById('root'))

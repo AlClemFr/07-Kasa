@@ -2,6 +2,7 @@
 // v- packages
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
+import useCollapse from 'react-collapsed';
 // import { NavLink } from 'react-router-dom'
 
 // import styled from 'styled-components'
@@ -14,6 +15,7 @@ import { DataLogement } from '../../30_data'
 //v- styles
 // import { Footer00 } from './styles'
 import '../../20_styles/Defilement.css'
+import '../../20_styles/Collapse.css'
 
 // v- images
 import flèche_vers_la_gauche from '../../10_images/flèche_vers_la_gauche.png'
@@ -26,6 +28,7 @@ function Defilement() {
   //  que l'on va appeler « count »  
   let [count, setCount] = useState(0)
 
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
 
   const { id } = useParams();
@@ -58,31 +61,46 @@ function Defilement() {
   // console.log(numeroFin)
 
   return (
-    // <>
-    <div className="defilement-corps">
-      <img className="defilement-image" src={image} alt={InfoLogement.description[count]} />
+    <>
+      <div className="defilement-corps">
+        <img className="defilement-image" src={image} alt={InfoLogement.description[count]} />
 
-      <h1 className="defilement-texte"> {"Fiche Logement = " + InfoLogement.id}</h1>
+        <h1 className="defilement-texte"> {"Fiche Logement = " + InfoLogement.id}</h1>
 
-      <div className={masquage}>
-        {/* fleche de gauche */}
-        <Link to={`/FicheLogement/${InfoLogement.id}`}>
-          <img className="defilement-gauche" src={flèche_vers_la_gauche}
-            alt={InfoLogement.description} onClick={() => setCount(count - 1)} />
-        </Link>
+        <div className={masquage}>
+          {/* fleche de gauche */}
+          <Link to={`/FicheLogement/${InfoLogement.id}`}>
+            <img className="defilement-gauche" src={flèche_vers_la_gauche}
+              alt={InfoLogement.description} onClick={() => setCount(count - 1)} />
+          </Link>
 
-        {/* fleche de droite */}
-        <Link to={`/FicheLogement/${InfoLogement.id}`}>
-          <img className="defilement-droite" src={flèche_vers_la_droite}
-            alt={InfoLogement.description} onClick={() => setCount(count + 1)} />
-        </Link>
+          {/* fleche de droite */}
+          <Link to={`/FicheLogement/${InfoLogement.id}`}>
+            <img className="defilement-droite" src={flèche_vers_la_droite}
+              alt={InfoLogement.description} onClick={() => setCount(count + 1)} />
+          </Link>
 
-        {/* valeur courante / nombre total  */}
-        <h5 className="defilement-numero"> {count + 1}/{numeroFin}</h5>
+          {/* valeur courante / nombre total  */}
+          <h5 className="defilement-numero"> {count + 1}/{numeroFin}</h5>
+        </div>
+      </div >
+
+      {/* teste collapse */}
+      <h1>Testo COLLAPSE</h1>
+
+      <div className="collapsible">
+        <div className="header" {...getToggleProps()}>
+          {isExpanded ? 'Collapse' : 'Expand'}
+        </div>
+        <div {...getCollapseProps()}>
+          <div className="content">
+            Now you can see the hidden content. <br /><br />
+            Click again to hide...
+          </div>
+        </div>
       </div>
-    </div >
 
-    // </>
+    </>
   )
 }
 

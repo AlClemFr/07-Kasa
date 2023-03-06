@@ -6,6 +6,8 @@ import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Defilement from '../../components/Defilement'
+// import Collapse from '../../components/Collapse'
+
 
 //v- Data 
 // import { DataLogement } from '../../30_data'
@@ -37,6 +39,7 @@ function FicheLogement() {
     <>
       <Header />
       <Defilement />
+      {/* <Collapse /> */}
       <Footer />
     </>
   )

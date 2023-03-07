@@ -2,6 +2,7 @@
 // v- packages
 import React from 'react';
 import useCollapse from 'react-collapsed';
+// import { useParams } from "react-router-dom";
 
 //v- styles
 // import { Footer00 } from './styles'
@@ -12,30 +13,63 @@ import '../../20_styles/Collapse.css'
 // import flèche_vers_la_droite from '../../10_images/flèche_vers_la_droite.png'
 
 
-function Collapse() {
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+function Collapse(Titre) {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
+
+  // const { id } = useParams();
+  // const InfoLogement = DataLogement.find((info) => info.id === id)
+
+  // {InfoLogement.description}
+
+  // const CollapseTitre = 'Description'
+  const CollapseTitre = Titre.Titre
+  console.log("Titre out: ", Titre.Titre)
+
+  let CollapseColor = ''
+
+  if (CollapseTitre === 'Description') {
+    console.log("Titre in: ", Titre.Titre)
+    CollapseColor = 'collapse-color-description'
+  }
+
+  if (CollapseTitre === 'Equipment') {
+    console.log("Titre in: ", Titre.Titre)
+    CollapseColor = 'collapse-color-equipment'
+  }
+
+  // }
+
+  let CollapseContent = 'Now you can see the hidden content.'
+  const CollapseEspace = <br></br>
+  CollapseContent = CollapseContent + { CollapseEspace } + 'Click again to hide...'
 
   return (
-
     <>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      {/* <h1>Testo COLLAPSE Index</h1> */}
 
-      <h1>Testo COLLAPSE</h1>
+      {/* <div className="collapsible"> */}
+      {/* <div className="collapse-total"> */}
+      <div className={CollapseColor} >
+        <div className="collapse-header" {...getToggleProps()}>
+          {/* {isExpanded ? 'Collapse' : 'Expand'} */}
+          {isExpanded ? CollapseTitre + 1 : CollapseTitre + 0}
 
-      {/* <div className="collapsible">
-        <div className="header" {...getToggleProps()}>
-          {isExpanded ? 'Collapse' : 'Expand'}
         </div>
+
         <div {...getCollapseProps()}>
-          <div className="content">
-            Now you can see the hidden content. <br /><br />
-            Click again to hide...
+          <div className="collapse-content">
+            {/* Now you can see the hidden content. <br /><br /> */}
+            {/* Click again to hide... */}
+            <br></br>
+            {CollapseContent}
           </div>
         </div>
-      </div> */}
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      {/* </div> */}
     </>
   );
 }

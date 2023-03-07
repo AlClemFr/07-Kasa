@@ -6,7 +6,7 @@ import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Defilement from '../../components/Defilement'
-// import Collapse from '../../components/Collapse'
+import Collapse from '../../components/Collapse'
 
 
 //v- Data 
@@ -39,7 +39,9 @@ function FicheLogement() {
     <>
       <Header />
       <Defilement />
-      {/* <Collapse /> */}
+      <Collapse Titre='Description' />
+      <Collapse Titre='Equipment' />
+
       <Footer />
     </>
   )

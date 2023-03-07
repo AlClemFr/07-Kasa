@@ -2,7 +2,7 @@
 // v- packages
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
-import useCollapse from 'react-collapsed';
+// import useCollapse from 'react-collapsed';
 // import { NavLink } from 'react-router-dom'
 
 // import styled from 'styled-components'
@@ -15,7 +15,7 @@ import { DataLogement } from '../../30_data'
 //v- styles
 // import { Footer00 } from './styles'
 import '../../20_styles/Defilement.css'
-import '../../20_styles/Collapse.css'
+// import '../../20_styles/Collapse.css'
 
 // v- images
 import flèche_vers_la_gauche from '../../10_images/flèche_vers_la_gauche.png'
@@ -28,7 +28,7 @@ function Defilement() {
   //  que l'on va appeler « count »  
   let [count, setCount] = useState(0)
 
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
+  // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
 
   const { id } = useParams();
@@ -86,7 +86,7 @@ function Defilement() {
       </div >
 
       {/* teste collapse */}
-      <h1>Testo COLLAPSE</h1>
+      {/* <h1>Testo COLLAPSE</h1>
 
       <div className="collapsible">
         <div className="header" {...getToggleProps()}>
@@ -98,7 +98,7 @@ function Defilement() {
             Click again to hide...
           </div>
         </div>
-      </div>
+      </div> */}
 
     </>
   )

@@ -3,9 +3,70 @@
   background-color: #db3434;
 }
 
-
 .collapsible .header {
   background-color: #491212;
   padding: 6px;
   cursor: pointer;
+}
+
+
+/*v- pour projet  */
+
+.collapse-total {
+  display: flex;
+  flex-wrap: wrap;
+
+  background: #F7F7F7;
+
+  /* border-radius: 10px; */
+
+  width: 90%;
+  Height: 152px;
+
+  margin-left: 5%;
+  margin-top: 0%;
+  /* z-index: 1; */
+}
+
+.collapse-color-description {
+  background: #FF6060;
+  border-radius: 10px;
+
+  width: 40%;
+  Height: 52px;
+
+  margin-left: 0%;
+  margin-top: 0%;
+  z-index: 1;
+}
+
+.collapse-color-equipment {
+  background: #FF6060;
+  border-radius: 10px;
+
+  width: 40%;
+  Height: 52px;
+
+  margin-left: 55%;
+  margin-top: -13.8%;
+  z-index: 1;
+}
+
+
+.collapse-header {
+  color: #F7F7F7;
+  padding: 6px;
+  cursor: pointer;
+
+}
+
+.collapse-content {
+  background: #F7F7F7;
+  border-radius: 10px;
+  /* width: 40%;
+  Height: 52px;
+
+  /* margin-left: 5%; */
+  margin-top: 8px;
+  z-index: 0;
 }

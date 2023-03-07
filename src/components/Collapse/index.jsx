@@ -13,7 +13,7 @@ import '../../20_styles/Collapse.css'
 // import flèche_vers_la_droite from '../../10_images/flèche_vers_la_droite.png'
 
 
-function Collapse(Titre) {
+function Collapse(Titre, TitreBis) {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
   // const { id } = useParams();
@@ -23,17 +23,20 @@ function Collapse(Titre) {
 
   // const CollapseTitre = 'Description'
   const CollapseTitre = Titre.Titre
-  console.log("Titre out: ", Titre.Titre)
+  console.log("Titre out: ", CollapseTitre)
+
+  const CollapseChoixCss = TitreBis.TitreBis
+  console.log("choix css out: ", CollapseChoixCss)
 
   let CollapseColor = ''
 
   if (CollapseTitre === 'Description') {
-    console.log("Titre in: ", Titre.Titre)
+    // console.log("Titre in: ", CollapseTitre)
     CollapseColor = 'collapse-color-description'
   }
 
   if (CollapseTitre === 'Equipment') {
-    console.log("Titre in: ", Titre.Titre)
+    // console.log("Titre in: ", CollapseTitre)
     CollapseColor = 'collapse-color-equipment'
   }
 
@@ -41,7 +44,14 @@ function Collapse(Titre) {
 
   let CollapseContent = 'Now you can see the hidden content.'
   const CollapseEspace = <br></br>
-  CollapseContent = CollapseContent + { CollapseEspace } + 'Click again to hide...'
+  CollapseContent = CollapseContent +
+    CollapseContent +
+    CollapseContent +
+    CollapseContent +
+    CollapseContent +
+    CollapseContent +
+    CollapseContent +
+    { CollapseEspace } + 'Click again to hide...'
 
   return (
     <>
@@ -53,7 +63,6 @@ function Collapse(Titre) {
         <div className="collapse-header" {...getToggleProps()}>
           {/* {isExpanded ? 'Collapse' : 'Expand'} */}
           {isExpanded ? CollapseTitre + 1 : CollapseTitre + 0}
-
         </div>
 
         <div {...getCollapseProps()}>
@@ -64,12 +73,12 @@ function Collapse(Titre) {
             {CollapseContent}
           </div>
         </div>
+        {/* </div> */}
+        {/* <br></br>
+      <br></br>
+      <br></br>
+      <br></br> */}
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      {/* </div> */}
     </>
   );
 }

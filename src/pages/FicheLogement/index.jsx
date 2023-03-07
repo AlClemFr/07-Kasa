@@ -13,6 +13,10 @@ import Collapse from '../../components/Collapse'
 // import { DataLogement } from '../../30_data'
 
 
+//v- styles
+// import { Footer00 } from './styles'
+import '../../20_styles/Collapse.css'
+
 function FicheLogement() {
 
   // const fiche = "Fiche Logement = " + useParams().id
@@ -39,9 +43,12 @@ function FicheLogement() {
     <>
       <Header />
       <Defilement />
-      <Collapse Titre='Description' />
-      <Collapse Titre='Equipment' />
 
+      {/* <Collapse Titre='Description' TitreBis='ChoixCss' /> */}
+      <div className='collapse-total'>
+        <Collapse Titre='Description' />
+        <Collapse Titre='Equipment' />
+      </div>
       <Footer />
     </>
   )

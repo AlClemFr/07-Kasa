@@ -15,13 +15,17 @@
 .collapse-total {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 
-  background: #F7F7F7;
+  /* background: #F7F7F7; */
+  background: #9cecb5;
+
 
   /* border-radius: 10px; */
 
   width: 90%;
-  Height: 152px;
+  Height: 249px;
+  /* Height: auto; */
 
   margin-left: 5%;
   margin-top: 0%;
@@ -29,26 +33,41 @@
 }
 
 .collapse-color-description {
+  /* display: flex; */
+
   background: #FF6060;
   border-radius: 10px;
 
-  width: 40%;
+  width: 45%;
+  width: 582px;
+
   Height: 52px;
 
   margin-left: 5%;
   margin-top: 0%;
+
+
+  margin-left: 0%;
+  margin-top: 0%;
+
   z-index: 1;
 }
 
 .collapse-color-equipment {
+  /* display: flex; */
+
   background: #FF6060;
   border-radius: 10px;
 
-  width: 40%;
+  width: 45%;
+  width: 582px;
   Height: 52px;
 
   margin-left: 55%;
   margin-top: -13.8%;
+
+  margin-left: 10%;
+  margin-top: 0%;
   z-index: 1;
 }
 

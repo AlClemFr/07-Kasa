@@ -1,23 +1,31 @@
 // v- packages
 import React from 'react'
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // v- chemin components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Defilement from '../../components/Defilement'
 import Collapse from '../../components/Collapse'
-import Testo from '../../components/Testo'
+// import Testo from '../../components/Testo'
+
 
 //v- Data 
-// import { DataLogement } from '../../30_data'
+import { DataLogement } from '../../30_data'
 
 
 //v- styles
 // import { Footer00 } from './styles'
 import '../../20_styles/Collapse.css'
 
+
+
+
 function FicheLogement() {
+
+  const { id } = useParams();
+  const InfoLogement = DataLogement.find((info) => info.id === id);
+  console.log("infologement 00 : ", InfoLogement)
 
   // const fiche = "Fiche Logement = " + useParams().id
 
@@ -42,12 +50,12 @@ function FicheLogement() {
   return (
     <>
       <Header />
-      <Defilement />
+      <Defilement IInfoLogement={InfoLogement} />
 
       {/* <Collapse Titre='Description' TitreBis='ChoixCss' /> */}
       <div className='collapse-total'>
-        <Collapse Titre='Description' TitreBis='Bis' />
-        <Collapse Titre='Equipment' />
+        <Collapse TTitre='Description' IInfoLogement={InfoLogement} />
+        <Collapse TTitre='Equipments' IInfoLogement={InfoLogement} />
       </div>
 
 

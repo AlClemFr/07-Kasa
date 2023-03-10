@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 
 // import styled from 'styled-components'
 
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
-//v- Data 
-import { DataLogement } from '../../30_data'
+// v- Data 
+// import { DataLogement } from '../../30_data'
 
 //v- styles
 // import { Footer00 } from './styles'
@@ -22,8 +22,10 @@ import flèche_vers_la_gauche from '../../10_images/flèche_vers_la_gauche.png'
 import flèche_vers_la_droite from '../../10_images/flèche_vers_la_droite.png'
 
 
-function Defilement() {
+function Defilement(props) {
 
+
+  console.log("infologement 01 : ", props)
   //  Déclare une nouvelle variable d'état, 
   //  que l'on va appeler « count »  
   let [count, setCount] = useState(0)
@@ -31,9 +33,13 @@ function Defilement() {
   // let count = 0
   // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
+  //j- teste inhibition
+  // const { id } = useParams();
+  // const InfoLogement = DataLogement.find((info) => info.id === id);
 
-  const { id } = useParams();
-  const InfoLogement = DataLogement.find((info) => info.id === id);
+  // const InfoLogement = InfoLogement
+  //v- récupération data via props
+  const InfoLogement = props.IInfoLogement
 
   let numeroFin = InfoLogement.pictures.length
   numeroFin = numeroFin.toString()

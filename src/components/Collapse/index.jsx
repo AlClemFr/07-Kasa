@@ -1,136 +1,174 @@
 
-// v- packages
-// import React from 'react';
+//v- packages
 import React, { useState } from 'react';
-//j- a supprimer prochainement
-// import useCollapse from 'react-collapsed';
-// import { useParams } from "react-router-dom";
 
 //v- styles
-// import { Footer00 } from './styles'
 import '../../20_styles/Collapse.css'
 
-// v- images
+//v- images
 import flècheHaut from '../../10_images/flèche_vers_le_haut.png'
 import flècheBas from '../../10_images/flèche_vers_le_bas.png'
 
 
-function Collapse(Titre, TitreBis) {
-  // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
+// function nbrEquip(props) {
 
-  // const { id } = useParams();
-  // const InfoLogement = DataLogement.find((info) => info.id === id)
+//   const InfoLogement = props.IInfoLogement
+//   const CollapseContent = InfoLogement.equipments
 
-  // {InfoLogement.description}
+//   return (
+//     <>
+//       {CollapseContent.map(content =>
+//         <li> {CollapseContent.content}</li>
 
-  // const CollapseTitre = 'Description'
-  const CollapseTitre = Titre.Titre
-  // console.log("Titre out: ", CollapseTitre)
+//       )}
+//     </>
+//   )
+// }
 
-  const CollapseChoixCss = TitreBis.TitreBis
-  // console.log("choix css out: ", CollapseChoixCss)
+// function CardTotal() {
+//   return (
+//     <div className='card-total'>
+//       {DataLogement.map(logement =>
 
+//         <Link className="card-individuel" to={`/FicheLogement/${logement.id}`}>
+//           <img className="card-cover" src={logement.cover} alt={logement.description} />
+//           <h1 className='card-titre'>{logement.title}</h1>
+//         </Link>
+
+//       )}
+//     </div >
+//   )
+// }
+
+
+
+
+// const tutu = <>
+//   <li> momo</li>
+//   <li> toto</li>
+//   <li> popo</li>
+//   <li> lolo</li>
+//   <li> gogo</li>
+// </>
+
+//v- fonction
+function Collapse(props) {
+
+  //v- récupération data via props
+  const CollapseTitre = props.TTitre
+  const InfoLogement = props.IInfoLogement
+
+  //v- variable useState 
+  const [toggle, setToggle] = useState(false)
+
+
+  //v- variable divers
   let CollapseColor = ''
-
-  if (CollapseTitre === 'Description') {
-    // console.log("Titre in: ", CollapseTitre)
-    CollapseColor = 'collapse-color-description'
-  }
-
-  if (CollapseTitre === 'Equipment') {
-    // console.log("Titre in: ", CollapseTitre)
-    CollapseColor = 'collapse-color-equipment'
-  }
-
-  // }
-
-  let CollapseContent = 'Now you can see the hidden content.'
-  const CollapseEspace = <br></br>
-  CollapseContent = CollapseContent +
-    CollapseContent +
-    CollapseContent +
-    CollapseContent +
-    CollapseContent +
-    CollapseContent +
-    CollapseContent +
-    { CollapseEspace } + 'Click again to hide...'
-
-
-  const [toggle, setToggle] = useState(true)
-  const [isOpen, setIsOpen] = useState(false)
-
+  let CollapseContent = ''
 
   let CollapseContentAff = ''
-  if (toggle === true) {
-    CollapseContentAff = "collapse-content-out"
-  }
 
-  if (toggle === false) {
-    CollapseContentAff = "collapse-content-in"
-  }
+  // if (toggle === true) {
+  //   CollapseContentAff = "collapse-content-out"
+  // }
 
-  // console.log(toggle)
+  // if (toggle === false) {
+  //   CollapseContentAff = "collapse-content-in"
+  // }
+
+  // const numeroFin = InfoLogement.CollapseContent.length
+  // console.log("numero fin: ", numeroFin, " jzejejejej")
+
+  // const tutu = function nbreEquip(props) {
+
+  //   const InfoLogement = props.IInfoLogement
+  //   const CollapseContent = InfoLogement.equipments
+  //   return (
+  //     <>
+  //       {/* <li> {CollapseContent[0]}</li>
+  //       <li> {CollapseContent[1]}</li>
+  //       <li> {CollapseContent[2]}</li>
+  //       <li> {CollapseContent[3]}</li> */}
+  //       <li> momo</li>
+  //       <li> toto</li>
+  //       <li> popo</li>
+  //       <li> lolo</li>
+  //       <li> gogo</li>
+  //     </>
+  //   )
+  // }
 
 
-  return (
-    <>
 
-      {/* <div className={CollapseColor} > */}
+  if (CollapseTitre === 'Description') {
+
+    CollapseColor = 'collapse-color-description'
+    CollapseContentAff = "collapse-content-description"
+
+    CollapseContent = InfoLogement.description
 
 
-      {/* <div className="collapse-header" {...getToggleProps()}>
-          {isExpanded ? CollapseTitre + 1 : CollapseTitre + 0}
+    return (
+      <>
+        <div className="collapse-block">
+          <button className={CollapseColor}
+            onClick={() => setToggle(!toggle)}>
+            <div className="collapse-header">
+              {CollapseTitre}
+            </div>
+            <img
+              className="collapse-color-flèche"
+              src={toggle ? flècheBas : flècheHaut}
+              alt="flèche" />
+          </button>
+
+          {toggle && (
+            <p className={CollapseContentAff}>
+              {CollapseContent}
+            </p>
+          )}
         </div>
 
-        <div {...getCollapseProps()}>
-          <div className="collapse-content">
-            <br></br>
-            {CollapseContent}
-          </div>
-        </div> */}
+      </>
 
-      {/* <br></br> */}
+    );
+  }
 
-      {/* Foctionnel */}
-      {/* <div className="collapse-toto">
-        <button className={CollapseColor}
-          onClick={() => setToggle(!toggle)}>
-          <div className="collapse-header">
-            {CollapseTitre + 0}
-          </div>
-        </button>
+  if (CollapseTitre === 'Equipments') {
 
-        {toggle && (
-          <p className={CollapseContentAff}>
-            {CollapseContent}
-          </p>
-        )}
-      </div> */}
+    CollapseColor = 'collapse-color-equipments'
+    CollapseContentAff = "collapse-content-equipments"
 
-      {/*j- teste ok*/}
-      <div className="collapse-block">
-        <button className={CollapseColor}
-          onClick={() => setIsOpen(!isOpen)}>
-          <div className="collapse-header">
-            {CollapseTitre + 1}
-          </div>
-          <img
-            className="collapse-color-flèche"
-            src={isOpen ? flècheBas : flècheHaut}
-            // src={flècheHaut}
+    CollapseContent = InfoLogement.equipments
+    const listEquipment = CollapseContent.map((poub) => <li>{poub}</li>)
 
-            alt="flèche" />
-        </button>
+    return (
+      <>
+        <div className="collapse-block">
+          <button className={CollapseColor}
+            onClick={() => setToggle(!toggle)}>
+            <div className="collapse-header">
+              {CollapseTitre}
+            </div>
+            <img
+              className="collapse-color-flèche"
+              src={toggle ? flècheBas : flècheHaut}
+              alt="flèche" />
+          </button>
 
-        {isOpen && (
-          <p className={CollapseContentAff}>
-            {CollapseContent}
-          </p>
-        )}
-      </div>
+          {toggle && (
+            <ul className={CollapseContentAff}>
+              {listEquipment}
+            </ul>
+          )}
+        </div>
 
-    </>
-  );
+      </>
+
+    );
+  }
+
+
 }
 
 export default Collapse

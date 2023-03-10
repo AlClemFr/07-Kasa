@@ -28,6 +28,7 @@ function Defilement() {
   //  que l'on va appeler « count »  
   let [count, setCount] = useState(0)
 
+  // let count = 0
   // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
 

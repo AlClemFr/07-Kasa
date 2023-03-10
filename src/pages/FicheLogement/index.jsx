@@ -7,7 +7,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Defilement from '../../components/Defilement'
 import Collapse from '../../components/Collapse'
-
+import Testo from '../../components/Testo'
 
 //v- Data 
 // import { DataLogement } from '../../30_data'
@@ -46,9 +46,12 @@ function FicheLogement() {
 
       {/* <Collapse Titre='Description' TitreBis='ChoixCss' /> */}
       <div className='collapse-total'>
-        <Collapse Titre='Description' />
+        <Collapse Titre='Description' TitreBis='Bis' />
         <Collapse Titre='Equipment' />
       </div>
+
+
+      {/* <Testo /> */}
       <Footer />
     </>
   )

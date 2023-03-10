@@ -18,6 +18,8 @@ function Apropos() {
       {/* </head> */}
       <Header />
       <BannerApropos />
+      {/* <div></div> */}
+
       <Footer />
     </>
   )

@@ -1,7 +1,9 @@
 
 // v- packages
-import React from 'react';
-import useCollapse from 'react-collapsed';
+// import React from 'react';
+import React, { useState } from 'react';
+//j- a supprimer prochainement
+// import useCollapse from 'react-collapsed';
 // import { useParams } from "react-router-dom";
 
 //v- styles
@@ -9,12 +11,12 @@ import useCollapse from 'react-collapsed';
 import '../../20_styles/Collapse.css'
 
 // v- images
-// import flèche_vers_la_gauche from '../../10_images/flèche_vers_la_gauche.png'
-// import flèche_vers_la_droite from '../../10_images/flèche_vers_la_droite.png'
+import flècheHaut from '../../10_images/flèche_vers_le_haut.png'
+import flècheBas from '../../10_images/flèche_vers_le_bas.png'
 
 
 function Collapse(Titre, TitreBis) {
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
+  // const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
 
   // const { id } = useParams();
   // const InfoLogement = DataLogement.find((info) => info.id === id)
@@ -23,10 +25,10 @@ function Collapse(Titre, TitreBis) {
 
   // const CollapseTitre = 'Description'
   const CollapseTitre = Titre.Titre
-  console.log("Titre out: ", CollapseTitre)
+  // console.log("Titre out: ", CollapseTitre)
 
   const CollapseChoixCss = TitreBis.TitreBis
-  console.log("choix css out: ", CollapseChoixCss)
+  // console.log("choix css out: ", CollapseChoixCss)
 
   let CollapseColor = ''
 
@@ -53,32 +55,80 @@ function Collapse(Titre, TitreBis) {
     CollapseContent +
     { CollapseEspace } + 'Click again to hide...'
 
+
+  const [toggle, setToggle] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
+
+
+  let CollapseContentAff = ''
+  if (toggle === true) {
+    CollapseContentAff = "collapse-content-out"
+  }
+
+  if (toggle === false) {
+    CollapseContentAff = "collapse-content-in"
+  }
+
+  // console.log(toggle)
+
+
   return (
     <>
-      {/* <h1>Testo COLLAPSE Index</h1> */}
 
-      {/* <div className="collapsible"> */}
-      {/* <div className="collapse-total"> */}
-      <div className={CollapseColor} >
-        <div className="collapse-header" {...getToggleProps()}>
-          {/* {isExpanded ? 'Collapse' : 'Expand'} */}
+      {/* <div className={CollapseColor} > */}
+
+
+      {/* <div className="collapse-header" {...getToggleProps()}>
           {isExpanded ? CollapseTitre + 1 : CollapseTitre + 0}
         </div>
 
         <div {...getCollapseProps()}>
           <div className="collapse-content">
-            {/* Now you can see the hidden content. <br /><br /> */}
-            {/* Click again to hide... */}
             <br></br>
             {CollapseContent}
           </div>
-        </div>
-        {/* </div> */}
-        {/* <br></br>
-      <br></br>
-      <br></br>
-      <br></br> */}
+        </div> */}
+
+      {/* <br></br> */}
+
+      {/* Foctionnel */}
+      {/* <div className="collapse-toto">
+        <button className={CollapseColor}
+          onClick={() => setToggle(!toggle)}>
+          <div className="collapse-header">
+            {CollapseTitre + 0}
+          </div>
+        </button>
+
+        {toggle && (
+          <p className={CollapseContentAff}>
+            {CollapseContent}
+          </p>
+        )}
+      </div> */}
+
+      {/*j- teste ok*/}
+      <div className="collapse-block">
+        <button className={CollapseColor}
+          onClick={() => setIsOpen(!isOpen)}>
+          <div className="collapse-header">
+            {CollapseTitre + 1}
+          </div>
+          <img
+            className="collapse-color-flèche"
+            src={isOpen ? flècheBas : flècheHaut}
+            // src={flècheHaut}
+
+            alt="flèche" />
+        </button>
+
+        {isOpen && (
+          <p className={CollapseContentAff}>
+            {CollapseContent}
+          </p>
+        )}
       </div>
+
     </>
   );
 }

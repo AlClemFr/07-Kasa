@@ -20,27 +20,12 @@ function Header() {
         <img className="header-logo" src={Logo} alt="Logo Kasa" />
       </NavLink>
 
-
-
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-
-
       {/* provisoire */}
-      <HeaderLink to="/error">Error</HeaderLink>
-
+      {/* <HeaderLink to="/error">Error</HeaderLink> */}
 
       {/* début kasa */}
       <HeaderAccueil to="/">Accueil</HeaderAccueil>
       <HeaderAbout to="/about">A Propos</HeaderAbout>
-
-
 
     </Header00 >
     // </nav>

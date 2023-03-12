@@ -14,11 +14,13 @@ const HeaderLink = styled(Link)`
 
 /* _Header. */
 const Header00 = styled.nav`
-position: absolute;
-width: 1240px;
+/* position: absolute; */
+/* width: 1240px; */
+width: 90%;
 height: 68px;
-left: 100px;
-top: 40px;
+/* left: 100px; */
+margin-top: 40px;
+margin-left:5%;
 `
 
 
@@ -32,25 +34,26 @@ top: 40px;
 /* Accueil */
 const HeaderAccueil = styled(Link)`
 position: absolute;
-left: 71.6%;
-left: 60%;
+
+display: flex;
+align-items: flex-end;
+text-align: right;
+
+/* left: 71.6%; */
+/* left: 75%; */
 
 right: 18.96%;
 top: 5.57%;
-bottom: 91.11%;
+bottom: 89%;
 
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 142.6%;
-/* or 34px */
 
-display: flex;
-align-items: flex-end;
-text-align: right;
 /* text-decoration: none; */
-text-decoration-line: underline;
+text-decoration-line: none;
 
 color: #FF6060;
 /* color: blue; */
@@ -60,12 +63,17 @@ color: #FF6060;
 /* A Propos */
 const HeaderAbout = styled(Link)`
 position: absolute;
-left: 85%;
-left: 75%;
 
-right: 6.94%;
-top: 5.57%;
-bottom: 91.11%;
+display: flex;
+align-items: flex-end;
+text-align: right;
+
+/* left: 85%; */
+/* left: 75%; */
+
+right: 6%;
+top: 6.57%;
+bottom: 89%;
 
 font-family: 'Montserrat';
 font-style: normal;
@@ -74,9 +82,7 @@ font-size: 24px;
 line-height: 142.6%;
 /* or 34px */
 
-display: flex;
-align-items: flex-end;
-text-align: right;
+
 /* text-decoration: none; */
 text-decoration-line: underline;
 

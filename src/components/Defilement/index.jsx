@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 // import { useParams } from "react-router-dom";
 
 // v- Data 
-// import { DataLogement } from '../../30_data'
+// import { DataLogement } from '../../30_data_logement'
 
 //v- styles
 // import { Footer00 } from './styles'

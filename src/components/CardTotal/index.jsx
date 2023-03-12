@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import '../../20_styles/Card.css'
 
 //v- Data 
-import { DataLogement } from '../../30_data'
+import { DataLogement } from '../../30_data_logement'
 
 function CardTotal() {
     return (

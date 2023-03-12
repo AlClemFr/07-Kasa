@@ -4,25 +4,30 @@
   box-sizing: border-box;
   justify-content: space-between;
 
-  /* background: #F7F7F7; */
-  background: #9cecb5;
   background: white;
 
-
-
-  /* border-radius: 10px; */
-
   width: 90%;
-  /* Height: 249px; */
   height: auto;
-
 
   margin-left: 5%;
   margin-top: 0%;
-  /* z-index: 1; */
 }
 
+.collapse-total-apropos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* justify-content: space-between; */
 
+  background: white;
+
+  width: 90%;
+  height: auto;
+
+  margin-left: 5%;
+  margin-top: 0%;
+}
 
 .collapse-block {
   display: flex;
@@ -31,12 +36,28 @@
   box-sizing: border-box;
 
   padding: 6px;
-  /* cursor: pointer; */
+
   cursor: zoom-in;
 
   font-size: 1em;
   width: 50%;
+}
 
+.collapse-block-apropos {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-self: start;
+  box-sizing: border-box;
+
+  padding: 6px;
+
+  cursor: zoom-in;
+
+  font-size: 1em;
+  width: 100%;
+
+  background: #FFFFFF;
 }
 
 .collapse-color-description {
@@ -55,6 +76,8 @@
 
   padding-left: 1%;
   padding-top: 5px;
+
+  z-index: 1;
 }
 
 .collapse-color-equipments {
@@ -76,6 +99,7 @@
   padding-left: 1%;
   padding-top: 5px;
 
+  z-index: 1;
 }
 
 .collapse-color-flèche {
@@ -108,35 +132,72 @@
   border-radius: 10px;
 
   width: 100%;
+  height: auto;
 
+  color: #FF6060;
   cursor: zoom-in;
 
-  margin-top: 1%;
-  padding: 6px;
+  margin-top: -10px;
+
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 12px;
 
   /*o-teste ok */
   animation: shake-out 0.7s;
+
 }
 
 .collapse-content-equipments {
-
+  /* display: flex; */
   list-style-type: none;
 
   background: #F7F7F7;
   border-radius: 10px;
 
   width: 100%;
+  height: auto;
 
+  color: #FF6060;
   cursor: zoom-in;
 
-  margin-top: 1%;
-  padding: 6px;
+  margin-top: -10px;
+
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 12px;
 
   /*o-teste ok */
   animation: shake-out 0.7s;
+
 }
 
+.collapse-content-apropos {
+  /* display: flex; */
+  list-style-type: none;
 
+  background: #F7F7F7;
+  border-radius: 10px;
+
+  width: 97.4%;
+  height: auto;
+
+  color: #FF6060;
+  cursor: zoom-in;
+
+  margin-top: -10px;
+
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 12px;
+
+  /*o-teste ok */
+  animation: shake-out 0.7s;
+
+}
 
 
 @keyframes shake-out {

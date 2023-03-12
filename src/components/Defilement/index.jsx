@@ -25,7 +25,7 @@ import flèche_vers_la_droite from '../../10_images/flèche_vers_la_droite.png'
 function Defilement(props) {
 
 
-  console.log("infologement 01 : ", props)
+  // console.log("infologement 01 : ", props)
   //  Déclare une nouvelle variable d'état, 
   //  que l'on va appeler « count »  
   let [count, setCount] = useState(0)
@@ -47,25 +47,14 @@ function Defilement(props) {
   if (count >= numeroFin) { count = 0 }
   if (count < 0) { count = numeroFin - 1 }
 
-  console.log("count: ", count, "  numerofin:", numeroFin)
+  // console.log("count: ", count, "  numerofin:", numeroFin)
 
   let masquage = "defilement-masquage"
   if (numeroFin > 1) { masquage = "" }
 
-  console.log("numero fin : ", numeroFin, "masquage:  ", masquage)
-
-  // let ii = count
-  // + 1
+  // console.log("numero fin : ", numeroFin, "masquage:  ", masquage)
 
   const image = InfoLogement.pictures[count]
-
-  // const numeroCourant = count
-
-  // let numeroFin = InfoLogement.pictures.length
-  // numeroFin = numeroFin.toString()
-
-  // console.log(numeroCourant)
-  // console.log(numeroFin)
 
   return (
     <>
@@ -91,22 +80,6 @@ function Defilement(props) {
           <h5 className="defilement-numero"> {count + 1}/{numeroFin}</h5>
         </div>
       </div >
-
-      {/* teste collapse */}
-      {/* <h1>Testo COLLAPSE</h1>
-
-      <div className="collapsible">
-        <div className="header" {...getToggleProps()}>
-          {isExpanded ? 'Collapse' : 'Expand'}
-        </div>
-        <div {...getCollapseProps()}>
-          <div className="content">
-            Now you can see the hidden content. <br /><br />
-            Click again to hide...
-          </div>
-        </div>
-      </div> */}
-
     </>
   )
 }

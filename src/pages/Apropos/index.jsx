@@ -5,20 +5,14 @@ import React from 'react'
 // v- chemin components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import BannerApropos from '../../components/BannerApropos'
+import Banner from '../../components/Banner'
 
 function Apropos() {
   return (
     <>
-      {/* <head> */}
-      {/* <!-- Titre de l'onglet --> */}
-      {/* <title>Kasa</title> */}
-      {/* <!-- Icone dans le titre de l'onglet --> */}
-      {/* <link rel="shortcut icon" href="../../10_images/Booki@3x.png"></link> */}
-      {/* </head> */}
+
       <Header />
-      <BannerApropos />
-      {/* <div></div> */}
+      <Banner BBannerTitre='Apropos' />
 
       <Footer />
     </>

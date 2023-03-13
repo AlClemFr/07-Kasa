@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //v- chemin page
 import Accueil from './pages/Accueil'
 import Apropos from './pages/Apropos'
-import FicheLogement from './pages/FicheLogement'
+import Logement from './pages/Logement'
 
 //v- chemin composants
 import Error from './components/Error'
@@ -20,7 +20,7 @@ const route =
 
       <Route path='/kasa' element={<Accueil />} />
       <Route path='/About' element={<Apropos />} />
-      <Route path='/FicheLogement/:id' element={<FicheLogement />} />
+      <Route path='/FicheLogement/:id' element={<Logement />} />
 
 
       {/* aucun chemain trouvée */}

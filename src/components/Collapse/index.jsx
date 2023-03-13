@@ -1,4 +1,3 @@
-
 //v- packages
 import React, { useState } from 'react';
 
@@ -8,7 +7,6 @@ import '../../20_styles/Collapse.css'
 //v- images
 import flècheHaut from '../../10_images/flèche_vers_le_haut.png'
 import flècheBas from '../../10_images/flèche_vers_le_bas.png'
-// import { string } from 'prop-types';
 
 //v- fonction
 function Collapse(props) {
@@ -16,7 +14,7 @@ function Collapse(props) {
   //v- récupération data via props
   const CollapseTitre = props.TTitre
 
-  console.log('indication du TTitre', CollapseTitre)
+  // console.log('indication du TTitre', CollapseTitre)
 
   //v- variable divers
   let CollapseColor = ''
@@ -26,8 +24,6 @@ function Collapse(props) {
 
   //v- variable useState 
   const [toggle, setToggle] = useState(false)
-
-
 
   if (CollapseTitre !== 'Apropos') {
 
@@ -93,14 +89,10 @@ function Collapse(props) {
               </ul>
             )}
           </div>
-
         </>
-
-      );
+      )
     }
-
   }
-
 
   if (CollapseTitre === 'Apropos') {
 

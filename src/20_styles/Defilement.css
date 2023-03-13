@@ -7,11 +7,8 @@
   width: 90%;
   height: 415px;
 
-  /* height: 1015px; */
-
   left: 0%;
   top: 0%;
-  /* background: rgb(174, 228, 174); */
 
   margin-left: 5%;
   margin-top: 25px;
@@ -46,23 +43,12 @@
 
   margin-left: 0%;
   margin-top: 0%;
-
-  /* margin-left: 30%;
-  margin-top: -32%; */
-
 }
 
 .defilement-flèche {
-  /* display: flex;
-  box-sizing: border-box;
-  justify-content: space-between; */
-
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  /* align-items: space-around; */
-
-  /* background-color: rgb(165, 200, 13); */
 
   width: 100%;
 
@@ -73,42 +59,23 @@
 
 .defilement-gauche {
   display: flex;
-  /* flex-direction: wrap; */
   box-sizing: border-box;
-
-  /* left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%; */
-
-
-  /* left: 0%; */
-  /* right: 0%;
-  top: 0%;
-  bottom: 0%; */
 
   height: 100px;
   width: 40px;
 
   margin-left: 23px;
-  /* margin-top: 0%; */
-
   z-index: 3;
-
-  /* color: green;
-  background-color: green; */
-
   opacity: 1;
 }
 
 .defilement-milieux-a-virer {
   display: flex;
   box-sizing: border-box;
-  align-items: end;
+  /* align-items: end; */
 
   height: 100px;
   width: 40px;
-
 }
 
 .defilement-droite {
@@ -128,15 +95,13 @@
 
 .defilement-numero {
   display: flex;
-  /* flex-direction: wrap; */
-
   box-sizing: border-box;
 
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
 
-  font-size: 2rem;
+  font-size: 1rem;
 
   /*v- pour débugage */
   /*v- 0=inhibé 1= affiché*/
@@ -145,14 +110,9 @@
 
   margin-left: 48%;
   margin-top: 140px;
-
-
-  /* color: rgb(33, 16, 225);
-  background-color: green; */
 }
 
 .defilement-sans-masquage {
-
   height: 100px;
   width: 100%;
 }

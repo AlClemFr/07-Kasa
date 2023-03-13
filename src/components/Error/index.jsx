@@ -3,7 +3,7 @@
 import { NavLink } from 'react-router-dom'
 
 //v- styles
-import { D404Chiff, D404Txt, D404Ret } from './styles';
+import { D404Chiff, D404Txt, D404Ret, D404Foot } from './styles';
 
 // v- chemin components
 import Header from '../../components/Header'
@@ -19,7 +19,9 @@ function Error() {
       < NavLink to='/'>
         <D404Ret>Retourner sur la page d'accueil</D404Ret>
       </NavLink>
-      <Footer />
+      <D404Foot >
+        <Footer />
+      </D404Foot>
     </>
   )
 }

@@ -10,9 +10,7 @@ position: absolute;
 width: 597px;
 height: 263px;
 
-/* left: 432px; */
 left: 30%;
-/* top: 277px; */
 top: 10%;
 
 font - family: 'Montserrat';
@@ -20,16 +18,15 @@ font - style: normal;
 font - weight: 700;
 font - size: 288px;
 
-
 line - height: 142.6 %;
 
-/* or 411px */
 display: flex;
 align - items: center;
 text - align: center;
 
 color: #FF6060;
-/* color: blue; */
+
+margin-top:164px;
 `
 
 
@@ -55,7 +52,9 @@ line - height: 142.6 %;
 display: flex;
 align - items: flex - end;
 
-color: #FF6060;`
+color: #FF6060;
+
+margin-top:100px;`
 
 
 /* Retourner sur la page d’accueil */
@@ -77,7 +76,17 @@ display: flex;
 align-items: flex-end;
 text-decoration-line: underline;
 
-color: #FF6060;`
+color: #FF6060;
 
+width: 400px;
+margin-top:100px;`
 
-export { D404Chiff, D404Txt, D404Ret }
+const D404Foot = styled.div`
+position: absolute;
+width:100%;
+
+margin-top:800px;
+
+`
+
+export { D404Chiff, D404Txt, D404Ret, D404Foot }

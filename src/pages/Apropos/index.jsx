@@ -8,7 +8,7 @@ import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
 
 //v- Data 
-import { DataApropos } from '../../31_data_apropos'
+import { DataApropos } from '../../30_data'
 
 function Apropos() {
   return (

@@ -10,7 +10,7 @@ import Collapse from '../../components/Collapse'
 
 
 //v- Data 
-import { DataLogement } from '../../30_data_logement'
+import { DataLogement } from '../../30_data'
 
 
 
@@ -32,14 +32,11 @@ function FicheLogement() {
       <Header />
       <Defilement IInfoLogement={InfoLogement} />
 
-      {/* <Collapse Titre='Description' TitreBis='ChoixCss' /> */}
+      <Collapse Titre='Description' TitreBis='ChoixCss' />
       <div className='collapse-total'>
         <Collapse TTitre='Description' IInfoLogement={InfoLogement} />
         <Collapse TTitre='Equipments' IInfoLogement={InfoLogement} />
       </div>
-
-
-      {/* <Testo /> */}
       <Footer />
     </>
   )

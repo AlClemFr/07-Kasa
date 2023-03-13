@@ -82,13 +82,11 @@ font-size: 24px;
 line-height: 142.6%;
 /* or 34px */
 
-
 /* text-decoration: none; */
 text-decoration-line: underline;
 
 color: #FF6060;
 /* color: blue; */
-
 
 `
 

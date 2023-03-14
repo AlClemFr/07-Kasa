@@ -25,7 +25,9 @@ function Logement() {
     <>
       <Header />
       <Defilement IInfoLogement={InfoLogement} />
+
       <DessusCollapse IInfoLogement={InfoLogement} />
+
       <div className='collapse-total'>
         <Collapse TTitre='Description' IInfoLogement={InfoLogement} />
         <Collapse TTitre='Equipments' IInfoLogement={InfoLogement} />

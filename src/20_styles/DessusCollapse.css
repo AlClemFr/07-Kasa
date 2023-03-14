@@ -1,0 +1,67 @@
+.dessus-corps {
+
+  width: 90%;
+  height: 200px;
+
+  margin-left: 5%;
+  margin-top: 30px;
+
+}
+
+/* background-color: rgb(188, 132, 240); */
+
+.dessus-title {
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  font-size: 1.7em;
+  color: #FF6060;
+
+  margin-top: -10px;
+}
+
+.dessus-location {
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0em;
+  color: #FF6060;
+
+  margin-top: -10px;
+}
+
+.dessus-total-tag {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+.dessus-tag {
+  color: #FFFFFF;
+
+  background-color: #FF6060;
+
+
+  border-radius: 25px;
+  width: 115px;
+  width: 250px;
+
+  height: 25px;
+
+  border-radius: 10px;
+
+
+  text-align: center;
+}
+
+.dessus-etoile {
+
+  color: #FF6060;
+
+
+}

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 // import styled from 'styled-components'
 
 //v- styles
-import { HeaderLink, Header00, HeaderAbout, HeaderAccueil } from './styles'
+import { Header00, HeaderAbout, HeaderAccueil } from './styles'
 import '../../20_styles/Header.css'
 
 // v- images

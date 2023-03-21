@@ -16,7 +16,7 @@ function Header() {
   return (
     // <nav>
     <Header00>
-      <NavLink to="/">
+      <NavLink to="/kasa">
         <img className="header-logo" src={Logo} alt="Logo Kasa" />
       </NavLink>
 
@@ -24,7 +24,7 @@ function Header() {
       {/* <HeaderLink to="/error">Error</HeaderLink> */}
 
       {/* début kasa */}
-      <HeaderAccueil to="/">Accueil</HeaderAccueil>
+      <HeaderAccueil to="/kasa">Accueil</HeaderAccueil>
       <HeaderAbout to="/about">A Propos</HeaderAbout>
 
     </Header00 >

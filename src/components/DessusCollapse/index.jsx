@@ -57,13 +57,15 @@ function DessusCollapse(props) {
           </div>
         </div>
 
-        <div className='dessus-nom-photo'>
-          <div>
-            {HostName}
+        <div className='dessus-nom-photo-etoile'>
+          <div className='dessus-nom-photo'>
+            <div className='dessus-nom'>
+              {HostName}
+            </div>
             {Hostpicture}
           </div>
 
-          <div>
+          <div class='dessus-etoile'>
             {listStar[0]}
             {listStar[1]}
             {listStar[2]}

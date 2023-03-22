@@ -3,9 +3,8 @@
   flex-direction: row;
   box-sizing: border-box;
 
-  /* align-content: space-between; */
-  /* align-self: space-between; */
   justify-content: space-between;
+  align-self: end;
 
   width: 90%;
   height: 200px;
@@ -17,32 +16,38 @@
   margin-bottom: 24px;
 }
 
-.dessus-texte-tag {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* align-content: space-around; */
-  /* width: 100%; */
-}
+/* .dessus-texte-tag { */
+/* display: flex; */
+/* flex-direction: row; */
+/* align-content: space-around; */
+/* width: 100%; */
+/* width: 100%; */
+/* } */
 
 .dessus-nom-photo-etoile {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  /* align-self: end; */
-
 
   color: #FF6060;
-  /*  */
+
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 1.0em;
+
+  width: auto;
 }
 
 .dessus-nom-photo {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+
+  justify-content: flex-end;
+
+  margin-bottom: 20px;
+  margin-top: -10px;
 }
 
 .dessus-nom {
@@ -50,16 +55,20 @@
   flex-direction: row;
   box-sizing: border-box;
 
-  /* height: 64px;
-  /* width: 50%; */
+  width: 50%;
 
-  /* text-align: center; */
-  /* padding: 1%; */
-  /* align-content: space-around; */
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .dessus-etoile {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+
   text-align: end;
+  flex-wrap: nowrap;
 }
 
 .dessus-photo {
@@ -74,20 +83,21 @@
   font-style: normal;
   font-weight: 500;
 
-  font-size: 1.7em;
+  font-size: 2.2em;
   color: #FF6060;
-  margin-top: -10px;
+  margin-top: -0px;
+
 }
 
 .dessus-location {
-
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  font-size: 1.0em;
+  font-size: 1.1em;
   color: #FF6060;
 
   margin-top: -10px;
+  margin-bottom: -30px;
 }
 
 .dessus-total-tag {
@@ -97,6 +107,7 @@
 
   width: 100%;
   margin-left: -2%;
+  margin-top: 50px;
 }
 
 .dessus-tag {
@@ -123,5 +134,4 @@
 
 .dessus-etoile {
   color: #FF6060;
-
 }
